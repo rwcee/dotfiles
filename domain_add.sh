@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # Script to provision a domain on this server
 echo "Welcome to the Domain Provisioning script."
 if [ $(id -u) -eq 0 ]; then

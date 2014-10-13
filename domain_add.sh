@@ -18,9 +18,9 @@ if [ $(id -u) -eq 0 ]; then
 	ln -s /etc/apache2/sites-available/$domain /etc/apache2/sites-enabled/$domain
 	echo "Your domain has been provisioned. Please verify in /var/www/html"
 	echo "and /etc/apache2/sites-enabled/."
-	exit 1
+	exit 0
 else
 	echo "Only root may provision domains."
-	exit 2
+	exit 1
 fi
 	

@@ -10,14 +10,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" go support
+" Vundle Plugins
+Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
+Plugin 'hashivim/vim-terraform'
 
-" molakai
-Bundle 'tomasr/molokai'
-
-" nerdtree
-Bundle 'scrooloose/nerdtree'
+" Vundle Colorschemes
+Plugin 'tomasr/molokai'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,6 +72,3 @@ let g:NERDTreeWinSize = 40
 
 " Toggle NERDTree with Leader-n
 map <leader>n :NERDTreeToggle<CR>
-
-" relative numbering
-"map <leader>r :set relativenumber<CR>

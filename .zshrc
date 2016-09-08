@@ -76,16 +76,22 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 #
 # Path for local user binaries
-PATH="$HOME/local/bin:$PATH"
+export PATH="$HOME/local/bin:$PATH"
 
 # Path for chefdk ruby and bundle
-PATH="/opt/chefdk/bin:/opt/chefdk/embedded/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/chefdk/bin:/opt/chefdk/embedded/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# Chef Paths
+export PM_CHEF="redacted"
+export JUMPCLOUD_CHEF_USERNAME="redacted"
+export PM_CHEF_USERNAME="redacted"
 
 # awscli autocomplete
 source /usr/local/share/zsh/site-functions/_aws
 
 # YAYLIASES
 alias tma="tmux attach -t"
+alias pmtf="cd ~/code/redacted/"
 alias tunnel="./$HOME/local/bin/tunnel"
 
 # Random exports

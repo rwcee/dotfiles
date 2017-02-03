@@ -14,6 +14,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
 Plugin 'hashivim/vim-terraform'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 
 " Vundle Colorschemes
 Plugin 'tomasr/molokai'
@@ -34,6 +36,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set backspace=indent,eol,start
+set relativenumber
 set number
 set tabstop=2
 set shiftwidth=2
@@ -67,8 +70,30 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+" Remap j,k to select options in popup lists
+inoremap <expr> <C-j> pumvisible() ? "\<C-N>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-P>" : "\<C-k>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+
+" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
+" copy to system clipboard
+map <leader>c "+y
+
 " Set the side bar size
 let g:NERDTreeWinSize = 40
 
 " Toggle NERDTree with Leader-n
 map <leader>n :NERDTreeToggle<CR>
+
+" GitGutter Stuff
+"Lower amount of time it takes to update gutter
+set updatetime=1000
+
+"Fix Gutter Colors
+hi clear SignColumn
+call gitgutter#highlight#define_highlights()

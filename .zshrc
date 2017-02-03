@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/changeme/.oh-my-zsh
+export ZSH=/Users/rob.campbell/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,7 +49,7 @@ ZSH_THEME="sorin"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(rails git ruby)
+plugins=(git ruby rvm kitchen)
 
 # User configuration
 
@@ -62,11 +62,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='mvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -82,17 +82,23 @@ export PATH="$HOME/local/bin:$PATH"
 export PATH="/opt/chefdk/bin:/opt/chefdk/embedded/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Chef Paths
-export PM_CHEF="redacted"
-export JUMPCLOUD_CHEF_USERNAME="redacted"
-export PM_CHEF_USERNAME="redacted"
+export PM_CHEF="/path/to/chefcode"
+export JUMPCLOUD_CHEF_USERNAME="user_name"
+export PM_CHEF_USERNAME="user_name"
 
 # awscli autocomplete
 source /usr/local/share/zsh/site-functions/_aws
 
 # YAYLIASES
 alias tma="tmux attach -t"
-alias pmtf="cd ~/code/redacted/"
-alias tunnel="./$HOME/local/bin/tunnel"
+alias pmtf="cd ~/path/to/terraforms"
+alias mtr="/usr/local/sbin/mtr"
+alias vi="vim"
+alias pmcode="cd ~/path/to/pmcode"
+alias pmchef="cd ~/path/to/chefcode"
 
 # Random exports
 export EDITOR='vim'
+export PM_PROXY="true"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

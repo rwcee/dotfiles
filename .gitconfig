@@ -1,0 +1,20 @@
+[user]
+	email = iamrwc@gmail.com
+	name = Rob Campbell
+[pull]
+	rebase = true
+[push]
+  default = upstream
+[format]
+  pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[alias]
+  co = checkout
+	br = branch
+  ci = commit
+  st = status
+	last = log -1 HEAD
+  lg = log --color --graph --pretty=oneline --abbrev-commit
+  rhom = reset --hard origin/master
+  rhoi = reset --hard origin/integration
+[color]
+	ui = auto

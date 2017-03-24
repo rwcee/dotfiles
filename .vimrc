@@ -73,7 +73,6 @@ map <c-h> <c-w>h
 " Remap j,k to select options in popup lists
 inoremap <expr> <C-j> pumvisible() ? "\<C-N>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-P>" : "\<C-k>"
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " Remember last location in file
 if has("autocmd")
@@ -97,3 +96,6 @@ set updatetime=1000
 "Fix Gutter Colors
 hi clear SignColumn
 call gitgutter#highlight#define_highlights()
+
+"fzf completion
+set rtp+=/usr/local/opt/fzf

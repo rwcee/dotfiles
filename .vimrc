@@ -12,7 +12,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Vundle Plugins
 Plugin 'scrooloose/nerdtree'
-Plugin 'fatih/vim-go'
 Plugin 'hashivim/vim-terraform'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
@@ -99,3 +98,13 @@ call gitgutter#highlight#define_highlights()
 
 "fzf completion
 set rtp+=/usr/local/opt/fzf
+
+" show problematic whitespace
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+
+" cron stuff
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif

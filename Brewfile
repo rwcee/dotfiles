@@ -22,6 +22,7 @@ mas "Spillo", id: 873245660
 mas "Textual 7", id: 1262957439
 mas "The Unarchiver", id: 425424353
 mas "Things 3", id: 904280696
+mas "Whatsapp Desktop", id: 1147396723
 
 # languages
 brew "python"

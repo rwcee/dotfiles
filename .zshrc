@@ -8,15 +8,33 @@ export ZSH=/Users/campbell/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="sorin"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="bullet-train"
+ZSH_THEME="bullet-train"
+
+# bullet-train opts
+BULLETTRAIN_PROMPT_ORDER=(
+  context
+  dir
+  git
+)
+BULLETTRAIN_PROMPT_CHAR='❯'
+BULLETTRAIN_CONTEXT_BG='green'
+BULLETTRAIN_CONTEXT_FG='black'
+BULLETTRAIN_DIR_BG='blue'
+BULLETTRAIN_DIR_FG='black'
+BULLETTRAIN_GIT_BG='253'
 
 # powerlevel9k opts
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('context' 'dir' 'vcs')
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator rbenv)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='green'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='white'
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
